@@ -30,10 +30,24 @@ async function gerarFrase() {
    const frase = `
 <p>
 In the search for love, <br>
-I found <a href="${link}" target="_blank">${titulo}</a> <br><br>
+I found <span class="wiki-wrapper">
+  <a href="${link}" target="_blank" class="wiki-link">${titulo}</a>
+
+  <div class="wiki-tooltip">
+    ${img ? `<img src="${img}" />` : ""}
+    <p>${desc}</p>
+  </div>
+</span> <br><br>
 
 So I started to wonder <br>
-if <a href="${link}" target="_blank">${titulo}</a> <br>
+if <span class="wiki-wrapper">
+  <a href="${link}" target="_blank" class="wiki-link">${titulo}</a>
+
+  <div class="wiki-tooltip">
+    ${img ? `<img src="${img}" />` : ""}
+    <p>${desc}</p>
+  </div>
+</span> <br>
 could also be a form of love
 </p>
 `;
