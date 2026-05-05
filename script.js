@@ -40,9 +40,10 @@ async function gerarFrase() {
 
    const frase = `
   <p>
-    In the search for love, <br>
+    In my search for something that really mattered, <br>
+    something that made it all worth it, <br>
     I found ${span1} <br><br>
-    So I started to wonder <br>
+    So I couldn't help but wonder <br>
     if ${span2} <br>
     could also be a form of love
   </p>`;
