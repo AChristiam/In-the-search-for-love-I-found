@@ -1,12 +1,16 @@
 async function getSummary(title) {
-  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
-
+  const encoded = encodeURIComponent(title.replace(/ /g, "_"));
+  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encoded}`;
   const res = await fetch(url);
   const data = await res.json();
-
+  return data;
+}async function getSummary(title) {
+  const encoded = encodeURIComponent(title.replace(/ /g, "_"));
+  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encoded}`;
+  const res = await fetch(url);
+  const data = await res.json();
   return data;
 }
-
 
 
 async function gerarFrase() {
