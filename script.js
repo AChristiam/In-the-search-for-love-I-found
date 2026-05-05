@@ -10,15 +10,15 @@ function makeWikiSpan(titulo, link, img, desc) {
   return `
     <span class="wiki-wrapper">
       <a href="${link}" target="_blank" class="wiki-link">${titulo}</a>
-      <div class="wiki-tooltip">
-        <div class="wiki-tooltip-inner">
+      <span class="wiki-tooltip">
+        <span class="wiki-tooltip-inner">
           ${img ? `<img src="${img}" />` : ""}
-          <div class="wiki-tooltip-text">
+          <span class="wiki-tooltip-text">
             <strong>${titulo}</strong>
-            <p>${desc}</p>
-          </div>
-        </div>
-      </div>
+            <span>${desc}</span>
+          </span>
+        </span>
+      </span>
     </span>`;
 }
 
