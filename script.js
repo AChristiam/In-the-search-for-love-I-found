@@ -1,5 +1,5 @@
 async function gerarFrase() {
-  const url = "https://pt.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
+  const url = "https://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
 
   try {
     const response = await fetch(url);
