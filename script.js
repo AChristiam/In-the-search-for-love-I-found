@@ -1,5 +1,5 @@
 async function getSummary(title) {
-  const url = `https://pt.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
+  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
 
   const res = await fetch(url);
   const data = await res.json();
@@ -10,7 +10,7 @@ async function getSummary(title) {
 
 
 async function gerarFrase() {
-  const url = "https://pt.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
+  const url = "https://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
 
   try {
     const response = await fetch(url);
