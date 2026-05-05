@@ -10,7 +10,7 @@ async function getSummary(title) {
 
 
 async function gerarFrase() {
-  const url = "https://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
+  const url = "https://pt.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
 
   try {
     const response = await fetch(url);
@@ -21,6 +21,11 @@ async function gerarFrase() {
 
     const titulo = page.title;
     const link = page.fullurl;
+
+    const summaryData = await getSummary(titulo);
+
+    const img = summaryData.thumbnail ? summaryData.thumbnail.source : null;
+    const desc = summaryData.extract || "";
 
    const frase = `
 <p>
@@ -36,8 +41,8 @@ could also be a form of love
     document.getElementById("frase").innerHTML = frase;
 
   } catch (error) {
-    document.getElementById("frase").innerText = "Erro ao carregar 😢";
     console.error(error);
+    document.getElementById("frase").innerText = "Erro ao carregar 😢";
   }
 }
 
