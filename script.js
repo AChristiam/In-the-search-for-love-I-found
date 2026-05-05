@@ -25,7 +25,7 @@ function makeWikiSpan(titulo, link, img, desc) {
 let currentLink = "";
 
 function openWiki() {
-  if (currentLink) window.location.href = currentLink;
+  if (currentLink) window.location.assign(currentLink);
 }
 
 async function gerarFrase() {
@@ -42,8 +42,8 @@ async function gerarFrase() {
     const img = summaryData.thumbnail ? summaryData.thumbnail.source : null;
     const desc = summaryData.extract || "";
 
-   const span1 = makeWikiSpan(titulo, link, img, desc);
-   const span2 = makeWikiSpan(titulo, link, img, desc);
+   const span1 = makeWikiSpan(titulo, img, desc);
+   const span2 = makeWikiSpan(titulo, img, desc);
 
    const frase = `
   <p>
