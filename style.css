@@ -80,3 +80,8 @@ button:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+#container button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
