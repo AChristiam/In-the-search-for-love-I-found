@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <style>
+.wiki-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.wiki-link {
+  color: #0645AD;
+  text-decoration: none;
+}
+
+.wiki-link:hover {
+  text-decoration: underline;
+}
+
+/* tooltip */
+.wiki-tooltip {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 260px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 12px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.wiki-wrapper:hover .wiki-tooltip {
+  display: block;
+}
+
+.wiki-tooltip img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+</style>
   <meta charset="UTF-8">
   <title>Frase Aleatória</title>
 
