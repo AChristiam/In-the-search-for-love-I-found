@@ -22,6 +22,12 @@ function makeWikiSpan(titulo, link, img, desc) {
     </span>`;
 }
 
+let currentLink = "";
+
+function openWiki() {
+  if (currentLink) window.open(currentLink, "_blank");
+}
+
 async function gerarFrase() {
   const url = "https://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=info&inprop=url&format=json&origin=*";
   try {
@@ -31,6 +37,7 @@ async function gerarFrase() {
     const page = Object.values(pages)[0];
     const titulo = page.title;
     const link = page.fullurl;
+    currentLink = link;
     const summaryData = await getSummary(titulo);
     const img = summaryData.thumbnail ? summaryData.thumbnail.source : null;
     const desc = summaryData.extract || "";
