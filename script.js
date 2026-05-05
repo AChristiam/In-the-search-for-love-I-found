@@ -11,8 +11,18 @@ async function gerarFrase() {
     const titulo = page.title;
     const link = page.fullurl;
 
-    const frase = `Hoje eu descobri algo inesperado sobre 
-      <a href="${link}" target="_blank">${titulo}</a>.`;
+   const frase = `
+<p>
+In the search for love, <br>
+I found <br><br>
+
+<a href="${link}" target="_blank">${titulo}</a> <br><br>
+
+So I started to wonder <br>
+if <a href="${link}" target="_blank">${titulo}</a> <br>
+could also be a form of love
+</p>
+`;
 
     document.getElementById("frase").innerHTML = frase;
 
