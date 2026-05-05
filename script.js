@@ -52,13 +52,12 @@ async function gerarFrase() {
     document.getElementById("frase").innerHTML = frase;
 
     document.querySelectorAll(".wiki-wrapper").forEach(wrapper => {
-      const tooltip = wrapper.querySelector(".wiki-tooltip");
-      wrapper.addEventListener("mouseenter", e => {
-        const rect = wrapper.getBoundingClientRect();
-        tooltip.style.top = (rect.bottom + 8) + "px";
-        tooltip.style.left = Math.min(rect.left, window.innerWidth - 340) + "px";
-      });
-    });
+  const tooltip = wrapper.querySelector(".wiki-tooltip");
+  wrapper.addEventListener("mousemove", e => {
+    tooltip.style.top = (e.clientY + 16) + "px";
+    tooltip.style.left = Math.min(e.clientX + 16, window.innerWidth - 340) + "px";
+  });
+});
 
   } catch (error) {
     console.error(error);
