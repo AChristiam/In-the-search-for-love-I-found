@@ -40,12 +40,14 @@ async function gerarFrase() {
 
    const frase = `
   <p>
-    In my search for something that really mattered, <br>
+    As I searched for something that really mattered, <br>
     something that made it all worth it, <br>
     I found ${span1} <br><br>
-    So I couldn't help but wonder <br>
-    if ${span2} <br>
-    could also be a form of love
+    So for a while, <br>
+    even if a brief while <br>
+    I wondered if <br>
+    ${span2} <br>
+    could be a form of love
   </p>`;
     document.getElementById("frase").innerHTML = frase;
 
