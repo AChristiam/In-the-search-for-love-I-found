@@ -6,7 +6,7 @@ async function getSummary(title) {
   return data;
 }
 
-function makeWikiSpan(titulo, link, img, desc) {
+function makeWikiSpan(titulo, img, desc) {
   return `
     <span class="wiki-wrapper">
       <span class="wiki-link">${titulo}</span>
