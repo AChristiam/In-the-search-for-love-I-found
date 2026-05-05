@@ -35,17 +35,17 @@ async function gerarFrase() {
     const img = summaryData.thumbnail ? summaryData.thumbnail.source : null;
     const desc = summaryData.extract || "";
 
-    const span = makeWikiSpan(titulo, link, img, desc);
+   const span1 = makeWikiSpan(titulo, link, img, desc);
+   const span2 = makeWikiSpan(titulo, link, img, desc);
 
-    const frase = `
-      <p>
-        In the search for love, <br>
-        I found ${span} <br><br>
-        So I started to wonder <br>
-        if ${span} <br>
-        could also be a form of love
-      </p>`;
-
+   const frase = `
+  <p>
+    In the search for love, <br>
+    I found ${span1} <br><br>
+    So I started to wonder <br>
+    if ${span2} <br>
+    could also be a form of love
+  </p>`;
     document.getElementById("frase").innerHTML = frase;
 
     document.querySelectorAll(".wiki-wrapper").forEach(wrapper => {
