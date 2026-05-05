@@ -1,7 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <style>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#container {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eaeaea;
+}
+
+/* Wikipedia tooltip */
 .wiki-wrapper {
   position: relative;
   display: inline-block;
@@ -16,7 +42,6 @@
   text-decoration: underline;
 }
 
-/* tooltip */
 .wiki-tooltip {
   display: none;
   position: absolute;
@@ -41,57 +66,3 @@
   margin-bottom: 8px;
 }
 </style>
-  <meta charset="UTF-8">
-  <title>Frase Aleatória</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #ffffff;
-
-      font-family: "Times New Roman", Times, serif;
-    }
-
-    #container {
-      text-align: center;
-      max-width: 600px;
-      padding: 20px;
-    }
-
-    a {
-      color: #0645AD; /* azul clássico da Wikipedia */
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 8px 12px;
-      border: 1px solid #ccc;
-      background: #f8f9fa;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #eaeaea;
-    }
-  </style>
-</head>
-<body>
-
-  <div id="container">
-    <h1 id="frase">Carregando...</h1>
-    <button onclick="gerarFrase()">Search for love</button>
-  </div>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
