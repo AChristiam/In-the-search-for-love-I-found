@@ -9,7 +9,7 @@ async function getSummary(title) {
 function makeWikiSpan(titulo, link, img, desc) {
   return `
     <span class="wiki-wrapper">
-      <a href="${link}" target="_blank" class="wiki-link">${titulo}</a>
+      <span class="wiki-link">${titulo}</span>
       <span class="wiki-tooltip">
         <span class="wiki-tooltip-inner">
           ${img ? `<img src="${img}" />` : ""}
@@ -45,7 +45,8 @@ async function gerarFrase() {
    const span1 = makeWikiSpan(titulo, img, desc);
    const span2 = makeWikiSpan(titulo, img, desc);
 
-   const frase = `
+  const frase = `
+  <h1>In the search for love I found</h1>
   <p>
     As I searched for something that really mattered, <br>
     something that made it all worth it, <br>
