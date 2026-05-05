@@ -14,9 +14,7 @@ async function gerarFrase() {
    const frase = `
 <p>
 In the search for love, <br>
-I found <br><br>
-
-<a href="${link}" target="_blank">${titulo}</a> <br><br>
+I found <a href="${link}" target="_blank">${titulo}</a> <br><br>
 
 So I started to wonder <br>
 if <a href="${link}" target="_blank">${titulo}</a> <br>
