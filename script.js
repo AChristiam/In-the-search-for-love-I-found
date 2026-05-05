@@ -25,7 +25,7 @@ function makeWikiSpan(titulo, link, img, desc) {
 let currentLink = "";
 
 function openWiki() {
-  if (currentLink) window.open(currentLink, "_blank");
+  if (currentLink) window.location.href = currentLink;
 }
 
 async function gerarFrase() {
